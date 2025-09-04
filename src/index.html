@@ -6,32 +6,54 @@
   <title>Github Dashboard Clone</title>
   <link href="../dist/output.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div>
-      <button>hamburger</button>
-      <img src="" alt=""><h1>Dashboard</h1>
+<body class="bg-github-background text-white">
+  <header class="flex justify-between p-4 border border-github-tertiary"> 
+    <div class="flex gap-3 items-center">
+      <button class="size-7 border border-github-icons rounded-md flex justify-center items-center">
+        <img src="../img/menu.png" alt="menu bar" class="size-2.5">
+      </button>
+      <img src="../img/github-logo-white.png" alt="octocat" class="size-7">
+      <h1>Dashboard</h1>
     </div>
 
-    <div>
-      <input type="text" placeholder="search Type / to search">
-      <div>
-        <button>frog</button>
-        <button>arrow</button>
+    <div class="flex gap-3 justify-center">
+      <div class="p-2 border border-github-tertiary w-60 h-7 flex items-center gap-2 text-sm rounded-md">
+        <img src="../img/search.png" alt="search icon" class="size-4">
+        <input type="text" placeholder="Type / to search" 
+          class="outline-0 bg-transparent text-left w-full">
       </div>
-      <div>
-        <button>+</button>
-        <button>arrow</button>
+      <div class="border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
+        <button class="flex items-center justify-center px-1 border-r border-github-tertiary">
+          <img src="../img/frog-head.png" alt="frog head" class="size-5">
+        </button>
+        <button class="flex items-center justify-center px-1">
+          <img src="../img/drop-down-arrow.png" alt="drop down" class="size-2">
+        </button>
       </div>
-      <button>target</button>
-      <button>pull request</button>
-      <button>notifs</button>
-      <img src="" alt="">
+      <div class="h-5 border-[0.5px] border-github-tertiary flex items-center"></div>
+      <div class="border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
+        <button class="flex items-center justify-center pl-2 pr-1">
+          <img src="../img/plus.png" alt="plus" class="size-3"></button>
+        <button class="flex items-center justify-center pl-1 pr-2">
+          <img src="../img/drop-down-arrow.png" alt="drop down" class="size-2">
+        </button>
+      </div>
+
+      <button class="p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+        <img src="../img/dot-circle.png" alt="target" class="size-3">
+      </button>
+      <button class="p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+        <img src="../img/pull.png" alt="pull request" class="size-3">
+      </button>
+      <button class="p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+        <img src="../img/mailbox.png" alt="notifications" class="size-3">
+      </button>
+      <img src="../img/profile.png" alt="profile" class="size-7 rounded-full">
     </div>
   </header>
 
-  <div>
-    <aside>
+  <div class="grid grid-cols-5 w-full">
+    <aside class="col-span-1 bg-github-primary border-r border-github-tertiary">
       <div>
         <h3>Top Repositories</h3>
         <button>New</button>
@@ -45,7 +67,7 @@
       <button>Show more</button>
     </aside>
 
-    <main>
+    <main class="col-span-3">
       <section>
         <h2>Home</h2>
         <input type="text" placeholder="Ask Copilot">
@@ -100,7 +122,7 @@
       </section>
     </main>
 
-    <aside>
+    <aside class="col-span-1">
       <h3>Latest changes</h3>
       <ul>
         <li>
