@@ -53,18 +53,30 @@
   </header>
 
   <div class="grid grid-cols-5 w-full">
-    <aside class="col-span-1 bg-github-primary border-r border-github-tertiary">
-      <div>
-        <h3>Top Repositories</h3>
-        <button>New</button>
+    <aside class="col-span-1 bg-github-primary border-r border-github-tertiary sticky p-5 text-sm h-[100dvh]">
+      <div class="flex justify-between items-center font-bold tracking-tight text-xs">
+        <h3>Top repositories</h3>
+        <div class="flex items-center gap-1 bg-green-600 rounded-md h-7 p-2">
+          <img src="../img/diary.png" alt="new repository" class="size-4">
+          <button>New</button>
+        </div>
       </div>
-      <input type="text" placeholder="Find a repository...">
+        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-secondary text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
       <ul>
-        <li>Kim-berlyA/arcane-quiz</li>
-        <li>Kim-berlyA/recipe-finder</li>
-        <li>Kim-berlyA/weather-app</li>
+        <li class="flex gap-2 py-1">
+          <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+          <p class="grow">Kim-berlyA/arcane-quiz</p>
+        </li>
+        <li class="flex gap-2 py-1">
+          <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+          <p class="grow">Kim-berlyA/recipe-finder</p>
+        </li>
+        <li class="flex gap-2 py-1">
+          <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+          <p class="grow">Kim-berlyA/weather-app</p>
+        </li>
       </ul>
-      <button>Show more</button>
+      <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
     </aside>
 
     <main class="col-span-3">
