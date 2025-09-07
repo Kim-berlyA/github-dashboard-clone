@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Dashboard Clone</title>
   <link href="../dist/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../img/github-logo-white.png" type="image/x-icon">
 </head>
 <body class="bg-github-background text-white">
-  <header class="flex justify-between p-4 border border-github-tertiary"> 
+  <header class="flex justify-between p-4 border-b border-github-tertiary"> 
     <div class="flex gap-3 items-center">
       <button class="size-7 border border-github-icons rounded-md flex justify-center items-center">
         <img src="../img/menu.png" alt="menu bar" class="size-2.5">
       </button>
-      <img src="../img/github-logo-white.png" alt="octocat" class="size-7">
-      <h1>Dashboard</h1>
+      <img src="../img/github-logo-white.png" alt="octocat" class="size-6">
+      <h1 class="text-sm">Dashboard</h1>
     </div>
 
     <div class="flex gap-3 justify-center">
@@ -30,7 +31,9 @@
           <img src="../img/drop-down-arrow.png" alt="drop down" class="size-2">
         </button>
       </div>
-      <div class="h-5 border-[0.5px] border-github-tertiary flex items-center"></div>
+      <div class="flex items-center">
+        <div class="h-5 border-l border-github-tertiary"></div>
+      </div>
       <div class="border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
         <button class="flex items-center justify-center pl-2 pr-1">
           <img src="../img/plus.png" alt="plus" class="size-3"></button>
@@ -79,21 +82,36 @@
       <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
     </aside>
 
-    <main class="col-span-3">
-      <section>
-        <h2>Home</h2>
-        <input type="text" placeholder="Ask Copilot">
-        <div>
-          <button>Create an issue for a bug</button>
-          <button>Make a Pong game</button>
-          <button>Summarize a pull request</button>
+    <main class="col-span-3 py-7 px-10">
+      <section class="flex gap-3 flex-col mb-7">
+        <h2 class="text-xl">Home</h2>
+        <div class="relative">
+          <input type="text" placeholder="Ask Copilot" class="w-full bg-github-primary rounded-xl border border-github-tertiary py-2 px-3">
+          <img src="../img/send.png" alt="send" class="size-4 absolute top-[0.9rem] right-3">
+        </div>
+        <div class="text-xs flex gap-1">
+          <button class="py-2 px-4 border rounded-full border-github-secondary flex gap-1 items-center">
+            <img src="../img/target.png" alt="target" class="size-3">
+            Create an issue for a bug
+          </button>
+          <button class="py-2 px-4 border rounded-full border-github-secondary flex gap-2 items-center">
+          <img src="../img/code.png" alt="code" class="size-4">
+            Make a Pong game
+          </button>
+          <button class="py-2 px-4 border rounded-full border-github-secondary flex gap-2 items-center">
+            <img src="../img/request.png" alt="pull request" class="size-3">
+            Summarize a pull request
+          </button>
         </div>
       </section>
 
       <section>
-        <div>
-          <h3>Feed</h3>
-          <button>Filter</button>
+        <div class="flex justify-between">
+          <h3 class="text-xs font-semibold">Feed</h3>
+          <button class="px-3 py-1 border border-github-tertiary rounded-md bg-github-btn flex gap-1 items-center text-sm">
+            <img src="../img/sort.png" alt="filter" class="size-4">
+            Filter
+          </button>
         </div>
 
         <div>

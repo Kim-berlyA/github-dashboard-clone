@@ -9,6 +9,7 @@ module.exports = {
           primary: '#0d1117',
           secondary: '#151b23',
           tertiary: '#3d444d',
+          btn: '#212830',
           icons: '#9198a1'
         }
       }
