@@ -10,20 +10,20 @@
 <body class="bg-github-background text-white">
   <header class="flex justify-between p-4 border-b border-github-tertiary"> 
     <div class="flex gap-3 items-center">
-      <button class="size-7 border border-github-icons rounded-md flex justify-center items-center">
-        <img src="../img/menu.png" alt="menu bar" class="size-2.5">
+      <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
+        <img src="../img/menu.png" alt="menu" class="size-3">
       </button>
       <img src="../img/github-logo-white.png" alt="octocat" class="size-6">
       <h1 class="text-sm">Dashboard</h1>
     </div>
 
     <div class="flex gap-3 justify-center">
-      <div class="p-2 border border-github-tertiary w-60 h-7 flex items-center gap-2 text-sm rounded-md">
+      <div class="hidden p-2 border border-github-tertiary w-60 h-7 flex items-center gap-2 text-sm rounded-md">
         <img src="../img/search.png" alt="search icon" class="size-4">
         <input type="text" placeholder="Type / to search" 
           class="outline-0 bg-transparent text-left w-full">
       </div>
-      <div class="border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
+      <div class="hidden border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
         <button class="flex items-center justify-center px-1 border-r border-github-tertiary">
           <img src="../img/frog-head.png" alt="frog head" class="size-5">
         </button>
@@ -31,10 +31,10 @@
           <img src="../img/drop-down-arrow.png" alt="drop down" class="size-2">
         </button>
       </div>
-      <div class="flex items-center">
+      <div class="hidden flex items-center">
         <div class="h-5 border-l border-github-tertiary"></div>
       </div>
-      <div class="border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
+      <div class="hidden border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
         <button class="flex items-center justify-center pl-2 pr-1">
           <img src="../img/plus.png" alt="plus" class="size-3"></button>
         <button class="flex items-center justify-center pl-1 pr-2">
@@ -42,21 +42,24 @@
         </button>
       </div>
 
-      <button class="p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+      <button class="hidden p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
         <img src="../img/dot-circle.png" alt="target" class="size-3">
       </button>
-      <button class="p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+      <button class="hidden p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
         <img src="../img/pull.png" alt="pull request" class="size-3">
       </button>
-      <button class="p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
-        <img src="../img/mailbox.png" alt="notifications" class="size-3">
+      <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
+        <img src="../img/search.png" alt="search icon" class="size-5">
+      </button>
+      <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
+        <img src="../img/mailbox.png" alt="search icon" class="size-4">
       </button>
       <img src="../img/profile.png" alt="profile" class="size-7 rounded-full">
     </div>
   </header>
 
-  <div class="grid grid-cols-5 w-full">
-    <aside class="col-span-1 bg-github-primary border-r border-github-tertiary sticky p-5 text-sm h-[100dvh]">
+  <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 w-full">
+    <aside class="hidden md:block md:col-span-2 lg:col-span-1 bg-github-primary border-r border-github-tertiary sticky p-5 text-sm h-[100dvh]">
       <div class="flex justify-between items-center font-bold tracking-tight text-xs">
         <h3>Top repositories</h3>
         <div class="flex items-center gap-1 bg-green-600 rounded-md h-7 p-2">
@@ -82,23 +85,24 @@
       <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
     </aside>
 
-    <main class="col-span-3 py-7 px-10">
+    <main class="col-span-1 md:col-span-3 lg-col-span-3 py-7 px-3">
       <section class="flex gap-3 flex-col mb-7">
-        <h2 class="text-xl">Home</h2>
+        <h2 class="text-xl font-semibold">Home</h2>
+        <div class="font-semibold text-xs">Copilot</div>
         <div class="relative">
-          <input type="text" placeholder="Ask Copilot" class="w-full bg-github-primary rounded-xl border border-github-tertiary py-2 px-3">
+          <input type="text" placeholder="Ask Copilot" class="w-full bg-github-secondary rounded-xl border border-github-tertiary py-2 px-3">
           <img src="../img/send.png" alt="send" class="size-4 absolute top-[0.9rem] right-3">
         </div>
         <div class="text-xs flex gap-1">
-          <button class="py-2 px-4 border rounded-full border-github-secondary flex gap-1 items-center">
+          <button class="hidden py-2 px-2 border rounded-full border-github-secondary flex gap-2 items-center">
             <img src="../img/target.png" alt="target" class="size-3">
             Create an issue for a bug
           </button>
-          <button class="py-2 px-4 border rounded-full border-github-secondary flex gap-2 items-center">
-          <img src="../img/code.png" alt="code" class="size-4">
+          <button class="py-2 px-2 border rounded-full border-github-tertiary flex gap-2 items-center">
+            <img src="../img/code.png" alt="code" class="size-4">
             Make a Pong game
           </button>
-          <button class="py-2 px-4 border rounded-full border-github-secondary flex gap-2 items-center">
+          <button class="py-2 px-4 border rounded-full border-github-tertiary flex gap-1 items-center">
             <img src="../img/request.png" alt="pull request" class="size-3">
             Summarize a pull request
           </button>
@@ -106,12 +110,47 @@
       </section>
 
       <section>
-        <div class="flex justify-between">
+        <h3 class="font-semibold text-xs">Top repositories</h3>
+        <div class="bg-github-secondary border border-github-tertiary rounded-md p-3 text-sm my-5">
+        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-btn text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
+        <ul class="flex flex-col text-xs border-b border-github-tertiary">
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/arcane-quiz</p>
+          </li>
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/recipe-finder</p>
+          </li>
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/arcane-quiz</p>
+          </li>
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/recipe-finder</p>
+          </li>
+          <li class="flex gap-2 pt-1 pb-3">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p>Kim-berlyA/weather-app</p>
+          </li>
+        </ul>
+        <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
+      </section>
+
+      <section>
+        <div class="flex justify-between items-center">
           <h3 class="text-xs font-semibold">Feed</h3>
-          <button class="px-3 py-1 border border-github-tertiary rounded-md bg-github-btn flex gap-1 items-center text-sm">
-            <img src="../img/sort.png" alt="filter" class="size-4">
-            Filter
-          </button>
+          <div class="flex gap-2">
+            <button class="px-3 py-1 border border-github-tertiary rounded-md bg-github-btn flex gap-1 items-center text-sm">
+              <img src="../img/sort.png" alt="filter" class="size-4">
+              Filter
+            </button>
+
+            <button class="p-1 border border-github-tertiary rounded-md bg-github-btn">
+              <img src="../img/sidebar.png" alt="sidebar" class="size-5">
+            </button>
+          </div>
         </div>
 
         <div>
@@ -152,7 +191,7 @@
       </section>
     </main>
 
-    <aside class="col-span-1">
+    <aside class="hidden lg:block lg:col-span-1">
       <h3>Latest changes</h3>
       <ul>
         <li>
