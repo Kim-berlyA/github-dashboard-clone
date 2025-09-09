@@ -90,7 +90,7 @@
         <h2 class="text-xl font-semibold">Home</h2>
         <div class="font-semibold text-xs">Copilot</div>
         <div class="relative">
-          <input type="text" placeholder="Ask Copilot" class="w-full bg-github-secondary rounded-xl border border-github-tertiary py-2 px-3">
+          <input type="text" placeholder="Ask Copilot" class="w-full bg-github-primary rounded-xl border border-github-tertiary py-2 px-3">
           <img src="../img/send.png" alt="send" class="size-4 absolute top-[0.9rem] right-3">
         </div>
         <div class="text-xs flex gap-1">
@@ -111,8 +111,8 @@
 
       <section>
         <h3 class="font-semibold text-sm">Top repositories</h3>
-        <div class="bg-github-secondary border border-github-tertiary rounded-md p-3 text-sm my-5">
-        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-btn text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
+        <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5">
+        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-secondary text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
         <ul class="flex flex-col text-xs border-b border-github-tertiary">
           <li class="flex gap-2 py-1">
             <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
@@ -153,37 +153,66 @@
           </div>
         </div>
 
-        <div>
-          <img src="" alt="">
-          <p><span>elonmusk</span> started following you</p>
-          <p>11 hours ago</p>
-          <button>...</button>
-          <div>
-            <img src="" alt="">
-            <div>
-              <p><span>Elon Musk</span> elonmusk</p>
-              <p>Owner of Tesla, X and SpaceX</p>
-              <p>100 repositories   5000 followers</p>
-            </div>
-            <button>Follow</button>
-          </div>
-        </div>
-        
-        <div>
-          <img src="" alt="">
-          <p><span>samaltman</span> forked your repository</p>
-          <p>2 days ago</p>
-          <button>...</button>
-          <div>
-            <img src="" alt="">
-            <div>
-              <div>
-                <img src="" alt="">
-                <p>samaltman/recipe-finder</p>
+        <div class="flex flex-col gap-1">
+          <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5 flex flex-col gap-1">
+            <div class="flex justify-between items-start">
+              <div class="flex gap-1">
+                <img src="../img/elonmusk.jpg" alt="elon musk" class="size-7 rounded-full">
+                <div>
+                  <span class="font-semibold">elonmusk </span><span class="text-github-icons text-sm">started following you</span>
+                  <p class="text-xs text-github-icons mt-1">11 hours ago</p>
+                </div>
               </div>
-              <div>
-                <button>Star</button>
-                <button>arrow</button>
+
+              <button>
+                <img src="../img/menu-dots.png" alt="menu dots" class="size-5">
+              </button>
+            </div>
+            
+            <div class="bg-github-secondary p-4 rounded flex gap-3">
+              <img src="../img/elonmusk.jpg" alt="elon musk" class="size-8 rounded-full">
+              <div class="flex justify-between items-start grow">
+                <div class="flex flex-col gap-1">
+                  <div>
+                    <span class="font-semibold">Elon Musk </span>
+                    <span class="text-github-icons">elonmusk</span>
+                  </div>
+                  <p>Owner of Tesla, X and SpaceX</p>
+                  <div class="flex gap-5 text-github-icons"><span>100 repositories</span> <span>5000 followers</span></div>
+                </div>
+                <button class="border border-github-tertiary rounded-md px-3 py-1 bg-github-btn text-xs">Follow</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5 flex flex-col gap-1">
+            <div class="flex justify-between items-start">
+              <div class="flex gap-1">
+                <img src="../img/samaltman.jpg" alt="sam altman" class="size-7 rounded-full">
+                <div>
+                  <span class="font-semibold">samaltman </span><span class="text-github-icons text-sm">forked your repository</span>
+                  <p class="text-xs text-github-icons mt-1">last week</p>
+                </div>
+              </div>
+
+              <button>
+                <img src="../img/menu-dots.png" alt="menu dots" class="size-5">
+              </button>
+            </div>
+            
+            <div class="bg-github-secondary p-4 rounded flex items-center gap-3">
+              <img src="../img/samaltman.jpg" alt="elon musk" class="size-4 rounded-full">
+              <div class="flex justify-between items-center grow">
+                <span class="text-semibold">samaltman/recipe-finder</span>
+                <button class="border border-github-tertiary rounded-md px-3 h-7 bg-github-btn flex items-center">
+                  <div class="border-r border-github-tertiary flex items-center gap-3 h-full">
+                    <img src="../img/star.png" alt="star icon" class="size-3">
+                    <span class="pr-2 text-xs">Star</span>
+                  </div>
+                  <div class="pl-2">
+                    <img src="../img/drop-down-arrow.png" alt="arrow" class="size-2">
+                  </div>
+                </button>
               </div>
             </div>
           </div>
