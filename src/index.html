@@ -7,6 +7,7 @@
   <link href="../dist/output.css" rel="stylesheet">
   <link rel="shortcut icon" href="../img/github-logo-white.png" type="image/x-icon">
 </head>
+
 <body class="bg-github-background text-white">
   <header class="flex justify-between p-4 border-b border-github-tertiary"> 
     <div class="flex gap-3 items-center">
@@ -23,6 +24,7 @@
         <input type="text" placeholder="Type / to search" 
           class="outline-0 bg-transparent text-left w-full">
       </div>
+
       <div class="hidden border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
         <button class="flex items-center justify-center px-1 border-r border-github-tertiary">
           <img src="../img/frog-head.png" alt="frog head" class="size-5">
@@ -31,6 +33,7 @@
           <img src="../img/drop-down-arrow.png" alt="drop down" class="size-2">
         </button>
       </div>
+
       <div class="hidden flex items-center">
         <div class="h-5 border-l border-github-tertiary"></div>
       </div>
@@ -45,15 +48,19 @@
       <button class="hidden p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
         <img src="../img/dot-circle.png" alt="target" class="size-3">
       </button>
+
       <button class="hidden p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
         <img src="../img/pull.png" alt="pull request" class="size-3">
       </button>
+
       <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
         <img src="../img/search.png" alt="search icon" class="size-5">
       </button>
+
       <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
         <img src="../img/mailbox.png" alt="search icon" class="size-4">
       </button>
+
       <img src="../img/profile.png" alt="profile" class="size-7 rounded-full">
     </div>
   </header>
@@ -111,31 +118,33 @@
 
       <section>
         <h3 class="font-semibold text-sm">Top repositories</h3>
+
         <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5">
-        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-secondary text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
-        <ul class="flex flex-col text-xs border-b border-github-tertiary">
-          <li class="flex gap-2 py-1">
-            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
-            <p class="grow">Kim-berlyA/arcane-quiz</p>
-          </li>
-          <li class="flex gap-2 py-1">
-            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
-            <p class="grow">Kim-berlyA/recipe-finder</p>
-          </li>
-          <li class="flex gap-2 py-1">
-            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
-            <p class="grow">Kim-berlyA/arcane-quiz</p>
-          </li>
-          <li class="flex gap-2 py-1">
-            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
-            <p class="grow">Kim-berlyA/recipe-finder</p>
-          </li>
-          <li class="flex gap-2 pt-1 pb-3">
-            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
-            <p>Kim-berlyA/weather-app</p>
-          </li>
-        </ul>
-        <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
+          <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-secondary text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
+          <ul class="flex flex-col text-xs border-b border-github-tertiary">
+            <li class="flex gap-2 py-1">
+              <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+              <p class="grow">Kim-berlyA/arcane-quiz</p>
+            </li>
+            <li class="flex gap-2 py-1">
+              <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+              <p class="grow">Kim-berlyA/recipe-finder</p>
+            </li>
+            <li class="flex gap-2 py-1">
+              <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+              <p class="grow">Kim-berlyA/arcane-quiz</p>
+            </li>
+            <li class="flex gap-2 py-1">
+              <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+              <p class="grow">Kim-berlyA/recipe-finder</p>
+            </li>
+            <li class="flex gap-2 pt-1 pb-3">
+              <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+              <p>Kim-berlyA/weather-app</p>
+            </li>
+          </ul>
+          <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
+        </div>
       </section>
 
       <section>
@@ -218,6 +227,8 @@
           </div>
         </div>
       </section>
+
+      <button class="border border-github-tertiary rounded-md p-2 w-full text-blue-500">More</button>
     </main>
 
     <aside class="hidden lg:block lg:col-span-1">
@@ -239,5 +250,24 @@
       </ul>
     </aside>
   </div>
+
+  <footer class="flex flex-col text-xs text-github-icons py-5 px-8"> 
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-1">
+      <div>Terms</div>
+      <div>Privacy</div>
+      <div>Security</div>
+      <div>Status</div>
+      <div>Github Community</div>
+      <div>Docs</div>
+      <div>Contact</div>
+      <div>Manage Cookies</div>
+      <div>Do not share my personal information</div>
+    </div>
+    
+    <div class="flex gap-2 justify-center py-3 items-center">
+      <img src="../img/github-logo-grey.png" alt="github logo" class="size-5">
+      <div>&copy; 2025 Github, Inc.</div>
+    </div>
+  </footer>
 </body>
 </html>
