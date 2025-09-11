@@ -8,11 +8,13 @@
   <link rel="shortcut icon" href="../img/github-logo-white.png" type="image/x-icon">
 </head>
 
-<body class="bg-github-background text-white no-scroll">
-  <nav class="w-[70%] h-screen fixed top-0 left-0 border-r border-github-tertiary rounded-r-lg z-50 bg-github-background py-3 px-2 text-sm flex flex-col">
+<body class="bg-github-background text-white no-scrollbar">
+  <div id="blur" class="fixed inset-0 bg-github-secondary/60 z-40"></div>
+
+  <nav id="nav" class="w-[70%] h-screen fixed top-0 left-0 border-r border-github-tertiary rounded-r-lg z-50 bg-github-background py-3 px-2 text-sm flex flex-col transform transition-transform duration-100 ease-in-out">
     <div class="flex justify-between mb-5 px-2 sticky">
       <img src="../img/github-logo-white.png" alt="github logo" class="size-7">
-      <button class="p-2 focus:bg-[#2d333b] rounded">
+      <button id="close" class="p-2 focus:bg-[#2d333b] hover:bg-[#2d333b] rounded">
         <img src="../img/close.png" alt="close" class="size-4">
       </button>
     </div>
@@ -44,6 +46,7 @@
           <p>Codespaces</p>
         </div>
       </div>
+
 
       <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
         <div class="flex gap-2 items-center">
@@ -124,7 +127,7 @@
 
   <header class="flex justify-between p-4 border-b border-github-tertiary"> 
     <div class="flex gap-3 items-center">
-      <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
+      <button id="menu" class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
         <img src="../img/menu.png" alt="menu" class="size-3">
       </button>
       <img src="../img/github-logo-white.png" alt="octocat" class="size-6">
@@ -382,5 +385,7 @@
       <div>&copy; 2025 Github, Inc.</div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
