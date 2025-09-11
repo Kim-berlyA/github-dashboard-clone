@@ -8,7 +8,120 @@
   <link rel="shortcut icon" href="../img/github-logo-white.png" type="image/x-icon">
 </head>
 
-<body class="bg-github-background text-white">
+<body class="bg-github-background text-white no-scroll">
+  <nav class="w-[70%] h-screen fixed top-0 left-0 border-r border-github-tertiary rounded-r-lg z-50 bg-github-background py-3 px-2 text-sm flex flex-col">
+    <div class="flex justify-between mb-5 px-2 sticky">
+      <img src="../img/github-logo-white.png" alt="github logo" class="size-7">
+      <button class="p-2 focus:bg-[#2d333b] rounded">
+        <img src="../img/close.png" alt="close" class="size-4">
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto no-scrollbar min-h-0">
+      <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
+        <div class="flex gap-2 items-center">
+          <img src="../img/home.png" alt="" class="size-4">
+          <p>Home</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/dot-circle.png" alt="" class="size-4">
+          <p>Issues</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/pull.png" alt="" class="size-4">
+          <p>Pull requests</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/layout.png" alt="" class="size-4">
+          <p>Projects</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/communications.png" alt="" class="size-4">
+          <p>Discussions</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/coding.png" alt="" class="size-4">
+          <p>Codespaces</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
+        <div class="flex gap-2 items-center">
+          <img src="../img/frog-head.png" alt="" class="size-4">
+          <p>Copilot</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/folder.png" alt="" class="size-4">
+          <p>Spaces</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/download.png" alt="" class="size-4">
+          <div class="flex justify-between w-full items-center">
+            <p>Download Copilot</p>
+            <img src="../img/down-arrow.png" alt="" class="size-6">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
+        <div class="flex gap-2 items-center">
+          <img src="../img/telescope.png" alt="" class="size-4">
+          <p>Explore</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../img/gift.png" alt="" class="size-4">
+          <p>Marketplace</p>
+        </div>
+      </div>
+
+      <div class="pt-3 px-2">
+        <div class="flex justify-between items-center">
+          <h3 class="text-github-icons text-xs">Repositories</h3>
+          <img src="../img/search.png" alt="search" class="size-5">
+        </div>
+        <ul class="flex flex-col text-sm pt-3 gap-1">
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/arcane-quiz</p>
+          </li>
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/recipe-finder</p>
+          </li>
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/arcane-quiz</p>
+          </li>
+          <li class="flex gap-2 py-1">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p class="grow">Kim-berlyA/recipe-finder</p>
+          </li>
+          <li class="flex gap-2 pt-1 pb-3">
+            <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+            <p>Kim-berlyA/weather-app</p>
+          </li>
+        </ul>
+      </div>
+
+    
+      <button class="pt-1 px-2 text-xs text-github-icons tracking-tighter font-light">Show more</button>
+      
+      <div class="pl-1 flex flex-col gap-2 mt-6 mr-10">
+        <div class="text-github-icons text-xs">&copy; 2025 Github, Inc.</div>
+        <div class="flex flex-wrap gap-x-2 text-blue-500 text-xs font-light">
+          <div>About</div>
+          <div>Blog</div>
+          <div>Terms</div>
+          <div>Privacy</div>
+          <div>Security</div>
+          <div>Status</div>
+          <div>Do not share my personal information</div>
+          <div>Manage Cookies</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <header class="flex justify-between p-4 border-b border-github-tertiary"> 
     <div class="flex gap-3 items-center">
       <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
@@ -263,7 +376,7 @@
       <div>Manage Cookies</div>
       <div>Do not share my personal information</div>
     </div>
-    
+
     <div class="flex gap-2 justify-center py-3 items-center">
       <img src="../img/github-logo-grey.png" alt="github logo" class="size-5">
       <div>&copy; 2025 Github, Inc.</div>
