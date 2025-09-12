@@ -19,7 +19,7 @@
       </button>
     </div>
 
-    <div class="flex-1 overflow-y-auto no-scrollbar min-h-0">
+    <div class="flex-1 overflow-y-auto min-h-0">
       <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
         <div class="flex gap-2 items-center">
           <img src="../img/home.png" alt="" class="size-4">
@@ -109,7 +109,7 @@
     
       <button class="pt-1 px-2 text-xs text-github-icons tracking-tighter font-light">Show more</button>
       
-      <div class="pl-1 flex flex-col gap-2 mt-6 mr-10">
+      <div class="pl-1 flex flex-col gap-2 my-6 mr-10">
         <div class="text-github-icons text-xs">&copy; 2025 Github, Inc.</div>
         <div class="flex flex-wrap gap-x-2 text-blue-500 text-xs font-light">
           <div>About</div>
@@ -182,7 +182,7 @@
   </header>
 
   <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 w-full">
-    <aside class="hidden md:block md:col-span-2 lg:col-span-1 bg-github-primary border-r border-github-tertiary sticky p-5 text-sm h-[100dvh]">
+    <aside class="hidden md:block md:col-span-2 lg:col-span-1 bg-github-primary border-r border-github-tertiary sticky p-5 text-sm h-screen">
       <div class="flex justify-between items-center font-bold tracking-tight text-xs">
         <h3>Top repositories</h3>
         <div class="flex items-center gap-1 bg-green-600 rounded-md h-7 p-2">
@@ -345,6 +345,25 @@
       </section>
 
       <button class="border border-github-tertiary rounded-md p-2 w-full text-blue-500">More</button>
+
+      <footer class="flex flex-col text-xs text-github-icons py-5 px-8 mt-10"> 
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-1">
+          <div>Terms</div>
+          <div>Privacy</div>
+          <div>Security</div>
+          <div>Status</div>
+          <div>Github Community</div>
+          <div>Docs</div>
+          <div>Contact</div>
+          <div>Manage Cookies</div>
+          <div>Do not share my personal information</div>
+        </div>
+
+        <div class="flex gap-2 justify-center py-3 items-center">
+          <img src="../img/github-logo-grey.png" alt="github logo" class="size-5">
+          <div>&copy; 2025 Github, Inc.</div>
+        </div>
+      </footer>
     </main>
 
     <aside class="hidden lg:block lg:col-span-1">
@@ -366,25 +385,6 @@
       </ul>
     </aside>
   </div>
-
-  <footer class="flex flex-col text-xs text-github-icons py-5 px-8"> 
-    <div class="flex flex-wrap justify-center gap-x-5 gap-y-1">
-      <div>Terms</div>
-      <div>Privacy</div>
-      <div>Security</div>
-      <div>Status</div>
-      <div>Github Community</div>
-      <div>Docs</div>
-      <div>Contact</div>
-      <div>Manage Cookies</div>
-      <div>Do not share my personal information</div>
-    </div>
-
-    <div class="flex gap-2 justify-center py-3 items-center">
-      <img src="../img/github-logo-grey.png" alt="github logo" class="size-5">
-      <div>&copy; 2025 Github, Inc.</div>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
