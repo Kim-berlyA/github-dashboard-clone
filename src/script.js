@@ -8,12 +8,14 @@ function openNavBar() {
   navBar.classList.remove('-translate-x-full');
   bodyElement.classList.add('no-scroll');
   blurBackground.classList.remove('hidden');
+  blurBackground.classList.add('fixed');
 }
 
 function closeNavBar() {
   navBar.classList.add('-translate-x-full');
   bodyElement.classList.remove('no-scroll');
   blurBackground.classList.add('hidden');
+  blurBackground.classList.remove('fixed');
 }
 
 blurBackground.addEventListener('click', () => {
