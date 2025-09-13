@@ -11,10 +11,10 @@
 <body class="bg-github-background text-white no-scrollbar">
   <div id="blur" class="hidden inset-0 bg-github-secondary/60 z-40"></div>
 
-  <nav id="nav" class="w-[70%] h-screen fixed top-0 left-0 border-r border-github-tertiary rounded-r-lg z-50 bg-github-background py-3 px-2 text-sm flex flex-col transform transition-transform duration-100 ease-in-out -translate-x-full">
+  <nav id="nav" class="w-[70%] h-screen fixed top-0 left-0 border-r border-github-tertiary rounded-lg z-50 bg-github-background py-3 px-2 text-sm flex flex-col transform transition-transform duration-100 ease-in-out -translate-x-full">
     <div class="flex justify-between mb-5 px-2 sticky">
       <img src="../img/github-logo-white.png" alt="github logo" class="size-7">
-      <button id="close" class="p-2 focus:bg-[#2d333b] hover:bg-[#2d333b] rounded">
+      <button id="close-nav" class="p-2 focus:bg-[#2d333b] hover:bg-[#2d333b] rounded">
         <img src="../img/close.png" alt="close" class="size-4">
       </button>
     </div>
@@ -124,6 +124,40 @@
       </div>
     </div>
   </nav>
+
+  <section id="sidebar" class="w-[90%] h-screen fixed top-0 right-0 border-l border-github-tertiary rounded-l-lg z-50 bg-github-background py-3 px-2 text-sm flex-col hidden">
+    <div class="flex justify-between items-center mb-5 px-2 sticky">
+      <h3>Explore</h3>
+      <button id="close-side" class="p-2 focus:bg-[#2d333b] hover:bg-[#2d333b] rounded">
+        <img src="../img/close.png" alt="close" class="size-4">
+      </button>
+    </div>
+
+    <div class="border border-github-tertiary rounded-md p-3 text-sm flex flex-col gap-2 items-start z-50">
+      <h3 class="font-semibold">Latest changes</h3>
+        <ul class="flex flex-col gap-2 relative border-l border-[#3d444db3] pl-6">
+          <li class="flex flex-col">
+            <div class="absolute -left-1.5 w-3 h-3 bg-[#3d444d] rounded-full"></div>
+            <span class="text-xs text-github-icons">24 minutes ago</span>
+            <p>Github Copilot in VS Code release for August (v1.104)</p>
+          </li>
+          <li class="flex flex-col">
+            <div class="absolute -left-1.5 w-3 h-3 bg-[#3d444d] rounded-full"></div>
+            <span class="text-xs text-github-icons">19 hours ago</span>
+            <p>Bring Your Own Key (BYOK) support for JetBrains IDEs and Xcode in public preview</p>
+          </li>
+          <li class="flex flex-col">
+            <div class="absolute -left-1.5 w-3 h-3 bg-[#3d444d] rounded-full"></div>
+            <span class="text-xs text-github-icons">Yesterday</span>
+            <p>Verified answers generally available in Github Discussions
+          </li>
+          <button class="flex gap-1 items-center text-left">
+            <p class="text-github-icons text-xs">View changelog</p>
+            <img src="../img/right-arrow.png" alt="close" class="size-4">
+          </button>
+        </ul>
+    </div>
+  </section>
 
   <header class="flex justify-between p-4 border-b border-github-tertiary"> 
     <div class="flex gap-3 items-center">
@@ -272,7 +306,7 @@
               Filter
             </button>
 
-            <button class="p-1 border border-github-tertiary rounded-md bg-github-btn">
+            <button id="sidebar-btn" class="p-1 border border-github-tertiary rounded-md bg-github-btn">
               <img src="../img/sidebar.png" alt="sidebar" class="size-5">
             </button>
           </div>

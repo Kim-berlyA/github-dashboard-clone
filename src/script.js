@@ -1,6 +1,9 @@
-const closeButton = document.getElementById('close');
-const openButton = document.getElementById('menu');
+const closeButtonNav = document.getElementById('close-nav');
+const openButtonNav = document.getElementById('menu');
+const closeButtonSide = document.getElementById('close-side');
+const openButtonSide = document.getElementById('sidebar-btn');
 const navBar = document.getElementById('nav');
+const sideBar = document.getElementById('sidebar');
 const bodyElement = document.body;
 const blurBackground = document.getElementById('blur');
 
@@ -19,11 +22,40 @@ function closeNavBar() {
 }
 
 blurBackground.addEventListener('click', () => {
+  if (!navBar.classList.contains('-translate-x-full')) {
+    closeNavBar();
+  } else if (!sideBar.classList.contains('translate-x-full')) {
+    closeSideBar();
+  }
+});
+
+closeButtonNav.addEventListener('click', () => {
   closeNavBar();
 });
-closeButton.addEventListener('click', () => {
-  closeNavBar();
-});
-openButton.addEventListener('click', () => {
+
+openButtonNav.addEventListener('click', () => {
   openNavBar();
+});
+
+function openSideBar() {
+  sideBar.classList.remove('hidden');
+  sideBar.classList.add('flex');
+  bodyElement.classList.add('no-scroll');
+  blurBackground.classList.remove('hidden');
+  blurBackground.classList.add('fixed');
+}
+
+function closeSideBar() {
+  sideBar.classList.add('hidden');
+  sideBar.classList.remove('flex');
+  bodyElement.classList.remove('no-scroll');
+  blurBackground.classList.add('hidden');
+  blurBackground.classList.remove('fixed');
+}
+
+closeButtonSide.addEventListener('click', () => {
+  closeSideBar();
+});
+openButtonSide.addEventListener('click', () => {
+  openSideBar();
 });
