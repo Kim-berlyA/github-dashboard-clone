@@ -8,19 +8,20 @@
   <link rel="shortcut icon" href="../img/github-logo-white.png" type="image/x-icon">
 </head>
 
-<body class="bg-github-background text-white no-scrollbar">
-  <div id="blur" class="hidden inset-0 bg-github-secondary/60 z-40"></div>
+<body class="bg-background dark:bg-background-dark text-text-primary dark:text-text-primary-dark no-scrollbar h-full">
+  <div id="blur" class="hidden inset-0 bg-secondary/60 z-40"></div>
 
-  <nav id="nav" class="w-[70%] h-screen fixed top-0 left-0 border-r border-github-tertiary rounded-lg z-50 bg-github-background py-3 px-2 text-sm flex flex-col transform transition-transform duration-100 ease-in-out -translate-x-full">
+  <nav id="nav" class="w-80 h-screen fixed top-0 left-0 border-r border-border dark:border-border-dark rounded-lg z-50 bg-background dark:bg-background-dark py-3 px-2 text-sm flex flex-col transform transition-transform duration-100 ease-in-out -translate-x-full">
     <div class="flex justify-between mb-5 px-2 sticky">
-      <img src="../img/github-logo-white.png" alt="github logo" class="size-7">
+      <img src="../img/github-logo-white.png" alt="github logo" class="size-7 hidden dark:block">
+      <img src="../img/github-logo-dark.png" alt="github logo" class="size-7 block dark:hidden">
       <button id="close-nav" class="p-2 focus:bg-[#2d333b] hover:bg-[#2d333b] rounded">
         <img src="../img/close.png" alt="close" class="size-4">
       </button>
     </div>
 
     <div class="flex-1 overflow-y-auto min-h-0">
-      <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
+      <div class="flex flex-col gap-3 border-b border-border dark:border-border-dark py-3 px-2">
         <div class="flex gap-2 items-center">
           <img src="../img/home.png" alt="" class="size-4">
           <p>Home</p>
@@ -48,7 +49,7 @@
       </div>
 
 
-      <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
+      <div class="flex flex-col gap-3 border-b border-border dark:border-border-dark py-3 px-2">
         <div class="flex gap-2 items-center">
           <img src="../img/frog-head.png" alt="" class="size-4">
           <p>Copilot</p>
@@ -66,7 +67,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col gap-3 border-b border-github-tertiary py-3 px-2">
+      <div class="flex flex-col gap-3 border-b border-border dark:border-border-dark py-3 px-2">
         <div class="flex gap-2 items-center">
           <img src="../img/telescope.png" alt="" class="size-4">
           <p>Explore</p>
@@ -79,7 +80,7 @@
 
       <div class="pt-3 px-2">
         <div class="flex justify-between items-center">
-          <h3 class="text-github-icons text-xs">Repositories</h3>
+          <h3 class="text-text-secondary dark:text-text-secondary-dark text-xs">Repositories</h3>
           <img src="../img/search.png" alt="search" class="size-5">
         </div>
         <ul class="flex flex-col text-sm pt-3 gap-1">
@@ -107,10 +108,10 @@
       </div>
 
     
-      <button class="pt-1 px-2 text-xs text-github-icons tracking-tighter font-light">Show more</button>
+      <button class="pt-1 px-2 text-xs text-text-secondary dark:text-text-secondary-dark tracking-tighter font-light">Show more</button>
       
       <div class="pl-1 flex flex-col gap-2 my-6 mr-10">
-        <div class="text-github-icons text-xs">&copy; 2025 Github, Inc.</div>
+        <div class="text-text-secondary dark:text-text-secondary-dark text-xs">&copy; 2025 Github, Inc.</div>
         <div class="flex flex-wrap gap-x-2 text-blue-500 text-xs font-light">
           <div>About</div>
           <div>Blog</div>
@@ -125,7 +126,7 @@
     </div>
   </nav>
 
-  <section id="sidebar" class="w-[90%] h-screen fixed top-0 right-0 border-l border-github-tertiary rounded-l-lg z-50 bg-github-background py-3 px-2 text-sm flex-col hidden">
+  <section id="sidebar" class="h-screen fixed top-0 right-0 border-l border-border dark:border-border-dark rounded-l-lg z-50 bg-background dark:bg-background-dark py-3 px-2 text-sm flex-col hidden w-4/5 lg:hidden">
     <div class="flex justify-between items-center mb-5 px-2 sticky">
       <h3>Explore</h3>
       <button id="close-side" class="p-2 focus:bg-[#2d333b] hover:bg-[#2d333b] rounded">
@@ -133,50 +134,61 @@
       </button>
     </div>
 
-    <div class="border border-github-tertiary rounded-md p-3 text-sm flex flex-col gap-2 items-start z-50">
+    <div class="border border-border dark:border-border-dark rounded-md p-3 text-sm flex flex-col gap-2 items-start z-50">
       <h3 class="font-semibold">Latest changes</h3>
-        <ul class="flex flex-col gap-2 relative border-l border-[#3d444db3] pl-6">
+        <ul class="flex flex-col gap-2 relative border-l border-[#dfe4e9] dark:border-[#3d444db3] pl-6">
           <li class="flex flex-col">
-            <div class="absolute -left-1.5 w-3 h-3 bg-[#3d444d] rounded-full"></div>
-            <span class="text-xs text-github-icons">24 minutes ago</span>
+            <div class="dot"></div>
+            <span class="text-xs text-text-secondary dark:text-text-secondary-dark">24 minutes ago</span>
             <p>Github Copilot in VS Code release for August (v1.104)</p>
           </li>
           <li class="flex flex-col">
-            <div class="absolute -left-1.5 w-3 h-3 bg-[#3d444d] rounded-full"></div>
-            <span class="text-xs text-github-icons">19 hours ago</span>
+            <div class="dot"></div>
+            <span class="text-xs text-text-secondary dark:text-text-secondary-dark">19 hours ago</span>
             <p>Bring Your Own Key (BYOK) support for JetBrains IDEs and Xcode in public preview</p>
           </li>
           <li class="flex flex-col">
-            <div class="absolute -left-1.5 w-3 h-3 bg-[#3d444d] rounded-full"></div>
-            <span class="text-xs text-github-icons">Yesterday</span>
+            <div class="dot"></div>
+            <span class="text-xs text-text-secondary dark:text-text-secondary-dark">Yesterday</span>
             <p>Verified answers generally available in Github Discussions
           </li>
           <button class="flex gap-1 items-center text-left">
-            <p class="text-github-icons text-xs">View changelog</p>
+            <p class="text-text-secondary dark:text-text-secondary-dark text-xs">View changelog</p>
             <img src="../img/right-arrow.png" alt="close" class="size-4">
           </button>
         </ul>
     </div>
   </section>
 
-  <header class="flex justify-between p-4 border-b border-github-tertiary"> 
+  <header class="bg-header dark:bg-background-dark flex justify-between p-4 border-b border-border dark:border-border-dark"> 
     <div class="flex gap-3 items-center">
-      <button id="menu" class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
+      <button id="menu" class="border border-border dark:border-border-dark size-7 flex items-center justify-center rounded-md">
         <img src="../img/menu.png" alt="menu" class="size-3">
       </button>
-      <img src="../img/github-logo-white.png" alt="octocat" class="size-6">
+      <img src="../img/github-logo-dark.png" alt="octocat" class="size-6 block dark:hidden">
+      <img src="../img/github-logo-white.png" alt="octocat" class="size-6 hidden dark:block">
       <h1 class="text-sm">Dashboard</h1>
     </div>
 
     <div class="flex gap-3 justify-center">
-      <div class="hidden p-2 border border-github-tertiary w-60 h-7 flex items-center gap-2 text-sm rounded-md">
+      <button class="border border-border dark:border-border-dark size-7 flex items-center justify-center rounded-md lg:hidden">
+        <img src="../img/search.png" alt="search icon" class="size-5">
+      </button>
+
+      <div class="hidden p-2 border border-border dark:border-border-dark w-60 h-7 lg:flex items-center gap-2 text-sm rounded-md">
         <img src="../img/search.png" alt="search icon" class="size-4">
         <input type="text" placeholder="Type / to search" 
           class="outline-0 bg-transparent text-left w-full">
       </div>
 
-      <div class="hidden border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
-        <button class="flex items-center justify-center px-1 border-r border-github-tertiary">
+      <div class="flex items-center justify-center">
+        <div id="toggle" class="w-11 h-6 bg-border dark:bg-button-dark rounded-full relative cursor-pointer transition-colors duration-300">
+          <div id="circle" class="w-4 h-4 bg-white rounded-full shadow absolute top-1 left-1 transition-all duration-300"></div>
+        </div>
+      </div>
+
+      <div class="hidden border border-border dark:border-border-dark w-15 h-7 md:flex items-stretch rounded-md">
+        <button class="flex items-center justify-center px-1 border-r border-border dark:border-border-dark">
           <img src="../img/frog-head.png" alt="frog head" class="size-5">
         </button>
         <button class="flex items-center justify-center px-1">
@@ -184,10 +196,10 @@
         </button>
       </div>
 
-      <div class="hidden flex items-center">
-        <div class="h-5 border-l border-github-tertiary"></div>
+      <div class="hidden md:flex items-center">
+        <div class="h-5 border-l border-border dark:border-border-dark"></div>
       </div>
-      <div class="hidden border border-github-tertiary w-15 h-7 flex items-stretch rounded-md">
+      <div class="hidden border border-border dark:border-border-dark w-15 h-7 md:flex items-stretch rounded-md">
         <button class="flex items-center justify-center pl-2 pr-1">
           <img src="../img/plus.png" alt="plus" class="size-3"></button>
         <button class="flex items-center justify-center pl-1 pr-2">
@@ -195,36 +207,34 @@
         </button>
       </div>
 
-      <button class="hidden p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+      <button class="hidden p-2 border border-border dark:border-border-dark w-15 h-7 md:flex items-center justify-center px-[0.4rem] rounded-md">
         <img src="../img/dot-circle.png" alt="target" class="size-3">
       </button>
 
-      <button class="hidden p-2 border border-github-tertiary w-15 h-7 flex items-center justify-center px-[0.4rem] rounded-md">
+      <button class="hidden p-2 border border-border dark:border-border-dark w-15 h-7 md:flex items-center justify-center px-[0.4rem] rounded-md">
         <img src="../img/pull.png" alt="pull request" class="size-3">
       </button>
 
-      <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
-        <img src="../img/search.png" alt="search icon" class="size-5">
-      </button>
-
-      <button class="border border-github-tertiary size-7 flex items-center justify-center rounded-md">
+      <button class="border border-border dark:border-border-dark size-7 flex items-center justify-center rounded-md">
         <img src="../img/mailbox.png" alt="search icon" class="size-4">
       </button>
 
-      <img src="../img/profile.png" alt="profile" class="size-7 rounded-full">
+      <div class="border border-border dark:border-0 rounded-full">
+        <img src="../img/profile.png" alt="profile" class="size-7 rounded-full">
+      </div>
     </div>
   </header>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 w-full">
-    <aside class="hidden md:block md:col-span-2 lg:col-span-1 bg-github-primary border-r border-github-tertiary sticky p-5 text-sm h-screen">
-      <div class="flex justify-between items-center font-bold tracking-tight text-xs">
+  <div class="grid grid-cols-1 md:grid-cols-7 lg:grid-cols-5 w-full">
+    <aside class="hidden md:block sticky top-0 md:col-span-2 lg:col-span-1 bg-primary dark:bg-primary-dark border-r border-border dark:border-border-dark p-5 text-sm h-screen">
+      <div class="flex justify-between items-center font-semibold">
         <h3>Top repositories</h3>
-        <div class="flex items-center gap-1 bg-green-600 rounded-md h-7 p-2">
+        <button class="flex items-center gap-1 bg-green-600 rounded-md h-7 p-2">
           <img src="../img/diary.png" alt="new repository" class="size-4">
-          <button>New</button>
-        </div>
+          <span class="text-text-primary-dark">New</span>
+        </button>
       </div>
-        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-secondary text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
+        <input type="text" placeholder="Find a repository..." class="border outline-0 bg-secondary dark:bg-secondary-dark text-left w-full border-border dark:border-border-dark rounded-md my-2 py-1 px-2">
       <ul>
         <li class="flex gap-2 py-1">
           <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
@@ -236,42 +246,54 @@
         </li>
         <li class="flex gap-2 py-1">
           <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+          <p class="grow">Kim-berlyA/pomodoro-timer</p>
+        </li>
+        <li class="flex gap-2 py-1">
+          <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+          <p class="grow">Kim-berlyA/recipe-finder</p>
+        </li>
+        <li class="flex gap-2 py-1">
+          <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
+          <p class="grow">Kim-berlyA/signup-form</p>
+        </li>
+        <li class="flex gap-2 py-1">
+          <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
           <p class="grow">Kim-berlyA/weather-app</p>
         </li>
       </ul>
-      <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
+      <button class="py-2 text-xs text-text-secondary dark:text-text-secondary-dark tracking-tighter ml-1">Show more</button>
     </aside>
 
-    <main class="col-span-1 md:col-span-3 lg-col-span-3 py-7 px-3">
+    <main class="col-span-1 md:col-span-5 lg:col-span-3 py-7 px-3">
       <section class="flex gap-3 flex-col mb-7">
         <h2 class="text-xl font-semibold">Home</h2>
-        <div class="font-semibold text-xs">Copilot</div>
+        <div class="font-semibold text-xs hidden lg:block">Copilot</div>
         <div class="relative">
-          <input type="text" placeholder="Ask Copilot" class="w-full bg-github-primary rounded-xl border border-github-tertiary py-2 px-3">
+          <input type="text" placeholder="Ask Copilot" class="w-full bg-primary dark:bg-primary-dark rounded-xl border border-border dark:border-border-dark py-2 px-3 focus:ring-1 focus:border-blue-500 focus:ring-blue-500 outline-none">
           <img src="../img/send.png" alt="send" class="size-4 absolute top-[0.9rem] right-3">
         </div>
         <div class="text-xs flex gap-1">
-          <button class="hidden py-2 px-2 border rounded-full border-github-secondary flex gap-2 items-center">
+          <button class="hidden py-2 px-2 border rounded-full border-border dark:border-border-dark lg:flex gap-2 items-center shadow-md">
             <img src="../img/target.png" alt="target" class="size-3">
             Create an issue for a bug
           </button>
-          <button class="py-2 px-2 border rounded-full border-github-tertiary flex gap-2 items-center">
+          <button class="py-2 px-2 border rounded-full border-border dark:border-border-dark flex gap-2 items-center shadow-md">
             <img src="../img/code.png" alt="code" class="size-4">
             Make a Pong game
           </button>
-          <button class="py-2 px-4 border rounded-full border-github-tertiary flex gap-1 items-center">
+          <button class="py-2 px-4 border rounded-full border-border dark:border-border-dark flex gap-1 items-center shadow-md">
             <img src="../img/request.png" alt="pull request" class="size-3">
             Summarize a pull request
           </button>
         </div>
       </section>
 
-      <section>
+      <section class="block md:hidden">
         <h3 class="font-semibold text-sm">Top repositories</h3>
 
-        <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5">
-          <input type="text" placeholder="Find a repository..." class="border outline-0 bg-github-secondary text-left w-full border-github-tertiary rounded-md my-2 py-1 px-2">
-          <ul class="flex flex-col text-xs border-b border-github-tertiary">
+        <div class="bg-primary dark:bg-primary-dark border border-border dark:border-border-dark rounded-md p-3 text-sm my-5">
+          <input type="text" placeholder="Find a repository..." class="border outline-0 bg-secondary dark:bg-secondary-dark text-left w-full border-border dark:border-border-dark rounded-md my-2 py-1 px-2">
+          <ul class="flex flex-col text-xs border-b border-border dark:border-border-dark">
             <li class="flex gap-2 py-1">
               <img src="../img/profile.png" alt="profile" class="size-4 rounded-full">
               <p class="grow">Kim-berlyA/arcane-quiz</p>
@@ -293,7 +315,7 @@
               <p>Kim-berlyA/weather-app</p>
             </li>
           </ul>
-          <button class="py-2 text-xs text-github-icons tracking-tighter ml-1 font-light">Show more</button>
+          <button class="py-2 text-xs text-text-secondary dark:text-text-secondary-dark tracking-tighter ml-1 font-light">Show more</button>
         </div>
       </section>
 
@@ -301,25 +323,25 @@
         <div class="flex justify-between items-center">
           <h3 class="text-sm font-semibold">Feed</h3>
           <div class="flex gap-2">
-            <button class="px-3 py-1 border border-github-tertiary rounded-md bg-github-btn flex gap-1 items-center text-sm">
+            <button class="px-3 py-1 border border-border dark:border-border-dark rounded-md bg-button dark:bg-button-dark flex gap-1 items-center text-sm">
               <img src="../img/sort.png" alt="filter" class="size-4">
               Filter
             </button>
 
-            <button id="sidebar-btn" class="p-1 border border-github-tertiary rounded-md bg-github-btn">
+            <button id="sidebar-button" class="p-1 border border-border dark:border-border-dark rounded-md bg-button dark:bg-button-dark lg:hidden">
               <img src="../img/sidebar.png" alt="sidebar" class="size-5">
             </button>
           </div>
         </div>
 
         <div class="flex flex-col gap-1">
-          <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5 flex flex-col gap-1">
+          <div class="card">
             <div class="flex justify-between items-start">
               <div class="flex gap-1">
                 <img src="../img/elonmusk.jpg" alt="elon musk" class="size-7 rounded-full">
                 <div>
-                  <span class="font-semibold">elonmusk </span><span class="text-github-icons text-sm">started following you</span>
-                  <p class="text-xs text-github-icons mt-1">11 hours ago</p>
+                  <span class="font-semibold">elonmusk </span><span class="text-text-secondary dark:text-text-secondary-dark text-sm">started following you</span>
+                  <p class="text-xs text-text-secondary dark:text-text-secondary-dark mt-1">11 hours ago</p>
                 </div>
               </div>
 
@@ -328,29 +350,29 @@
               </button>
             </div>
             
-            <div class="bg-github-secondary p-4 rounded flex gap-3">
+            <div class="bg-secondary dark:bg-secondary-dark p-4 rounded flex gap-3">
               <img src="../img/elonmusk.jpg" alt="elon musk" class="size-8 rounded-full">
               <div class="flex justify-between items-start grow">
                 <div class="flex flex-col gap-1">
                   <div>
                     <span class="font-semibold">Elon Musk </span>
-                    <span class="text-github-icons">elonmusk</span>
+                    <span class="text-text-secondary dark:text-text-secondary-dark">elonmusk</span>
                   </div>
                   <p>Owner of Tesla, X and SpaceX</p>
-                  <div class="flex gap-5 text-github-icons"><span>100 repositories</span> <span>5000 followers</span></div>
+                  <div class="flex gap-5 text-text-secondary dark:text-text-secondary-dark"><span>100 repositories</span> <span>5000 followers</span></div>
                 </div>
-                <button class="border border-github-tertiary rounded-md px-3 py-1 bg-github-btn text-xs">Follow</button>
+                <button class="border border-border dark:border-border-dark rounded-md px-3 py-1 bg-button dark:bg-button-dark text-xs">Follow</button>
               </div>
             </div>
           </div>
           
-          <div class="bg-github-primary border border-github-tertiary rounded-md p-3 text-sm my-5 flex flex-col gap-1">
+          <div class="card">
             <div class="flex justify-between items-start">
               <div class="flex gap-1">
                 <img src="../img/samaltman.jpg" alt="sam altman" class="size-7 rounded-full">
                 <div>
-                  <span class="font-semibold">samaltman </span><span class="text-github-icons text-sm">forked your repository</span>
-                  <p class="text-xs text-github-icons mt-1">last week</p>
+                  <span class="font-semibold">samaltman </span><span class="text-text-secondary dark:text-text-secondary-dark text-sm">forked your repository</span>
+                  <p class="text-xs text-text-secondary dark:text-text-secondary-dark mt-1">last week</p>
                 </div>
               </div>
 
@@ -359,12 +381,12 @@
               </button>
             </div>
             
-            <div class="bg-github-secondary p-4 rounded flex items-center gap-3">
+            <div class="bg-secondary dark:bg-secondary-dark p-4 rounded flex items-center gap-3">
               <img src="../img/samaltman.jpg" alt="elon musk" class="size-4 rounded-full">
               <div class="flex justify-between items-center grow">
                 <span class="text-semibold">samaltman/recipe-finder</span>
-                <button class="border border-github-tertiary rounded-md px-3 h-7 bg-github-btn flex items-center">
-                  <div class="border-r border-github-tertiary flex items-center gap-3 h-full">
+                <button class="border border-border dark:border-border-dark rounded-md px-3 h-7 bg-button dark:bg-button-dark flex items-center">
+                  <div class="border-r border-border dark:border-border-dark flex items-center gap-3 h-full">
                     <img src="../img/star.png" alt="star icon" class="size-3">
                     <span class="pr-2 text-xs">Star</span>
                   </div>
@@ -378,9 +400,9 @@
         </div>
       </section>
 
-      <button class="border border-github-tertiary rounded-md p-2 w-full text-blue-500">More</button>
+      <button class="border border-border dark:border-border-dark rounded-md p-2 w-full text-blue-500">More</button>
 
-      <footer class="flex flex-col text-xs text-github-icons py-5 px-8 mt-10"> 
+      <footer class="flex flex-col text-xs text-text-secondary dark:text-text-secondary-dark pt-5 px-8 mt-10"> 
         <div class="flex flex-wrap justify-center gap-x-5 gap-y-1">
           <div>Terms</div>
           <div>Privacy</div>
@@ -400,23 +422,31 @@
       </footer>
     </main>
 
-    <aside class="hidden lg:block lg:col-span-1">
-      <h3>Latest changes</h3>
-      <ul>
-        <li>
-          <span>2 days ago</span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati
-        </li>
-        <li>
-          <span>5 days ago</span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati
-        </li>
-        <li>
-          <span>6 days ago</span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati
-        </li>
-        <button>View changelog</button>
-      </ul>
+    <aside class="hidden lg:col-span-1 bg-background dark:bg-background-dark py-3 px-2 text-sm lg:flex flex-col mt-7 mx-3"> 
+      <div class="border border-border dark:border-border-dark rounded-md p-3 text-sm flex flex-col gap-2 items-start z-50">
+        <h3 class="font-semibold">Latest changes</h3>
+          <ul class="flex flex-col gap-2 relative border-l border-[#dfe4e9] dark:border-[#3d444db3] pl-6">
+            <li class="flex flex-col">
+              <div class="dot"></div>
+              <span class="text-xs text-text-secondary dark:text-text-secondary-dark">24 minutes ago</span>
+              <p>Github Copilot in VS Code release for August (v1.104)</p>
+            </li>
+            <li class="flex flex-col">
+              <div class="dot"></div>
+              <span class="text-xs text-text-secondary dark:text-text-secondary-dark">19 hours ago</span>
+              <p>Bring Your Own Key (BYOK) support for JetBrains IDEs and Xcode in public preview</p>
+            </li>
+            <li class="flex flex-col">
+              <div class="dot"></div>
+              <span class="text-xs text-text-secondary dark:text-text-secondary-dark">Yesterday</span>
+              <p>Verified answers generally available in Github Discussions
+            </li>
+            <button class="flex gap-1 items-center text-left">
+              <p class="text-text-secondary dark:text-text-secondary-dark text-xs">View changelog</p>
+              <img src="../img/right-arrow.png" alt="close" class="size-4">
+            </button>
+          </ul>
+      </div>
     </aside>
   </div>
 

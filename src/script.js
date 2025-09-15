@@ -1,11 +1,16 @@
 const closeButtonNav = document.getElementById('close-nav');
 const openButtonNav = document.getElementById('menu');
 const closeButtonSide = document.getElementById('close-side');
-const openButtonSide = document.getElementById('sidebar-btn');
+const openButtonSide = document.getElementById('sidebar-button');
+
 const navBar = document.getElementById('nav');
 const sideBar = document.getElementById('sidebar');
 const bodyElement = document.body;
 const blurBackground = document.getElementById('blur');
+
+const toggle = document.getElementById('toggle');
+const circle = document.getElementById('circle');
+const html = document.documentElement;
 
 function openNavBar() {
   navBar.classList.remove('-translate-x-full');
@@ -58,4 +63,9 @@ closeButtonSide.addEventListener('click', () => {
 });
 openButtonSide.addEventListener('click', () => {
   openSideBar();
+});
+
+toggle.addEventListener('click', () => {
+  circle.classList.toggle('translate-x-5');
+  html.classList.toggle('dark');
 });
